@@ -7,7 +7,7 @@ import gym
 from gym.envs.toy_text.frozen_lake import generate_random_map
 
 
-def initiate_frozen_lake(custom_desc=None, chosen_map=None, slippery_surface=False):
+def load_frozen_lake(custom_desc=None, chosen_map=None, slippery_surface=False):
     """
     Loadign the FrozenLakeEnv environment from OpenAI's gym with specified parameters
     """
