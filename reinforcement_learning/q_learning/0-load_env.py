@@ -7,19 +7,17 @@ import gym
 from gym.envs.toy_text.frozen_lake import generate_random_map
 
 
-def load_frozen_lake(custom_desc=None, chosen_map=None, slippery_surface=False):
+def load_frozen_lake(desc=None, map_name=None, is_slippery=False):
     """
     Loadign the FrozenLakeEnv environment from OpenAI's gym with specified parameters
     """
-    if custom_desc is None and chosen_map is None:
+    # If a custom description is provided, generate a random map
+    if desc is not None:
         size = 8  # Default size for a random map
-        custom_desc = generate_random_map(size=size, p=0.8)  # p is the probability of a tile being frozen
+        desc = generate_random_map(size=size, p=0.8)
 
-    if custom_desc is not None:
-        # creating a custom FrozenLake environment with the given description
-        env = gym.make("FrozenLake-v1", desc=custom_desc, is_slippery=slippery_surface)
-    else:
-        # loading a pre-made mapo
-        env = gym.make(f"FrozenLake-{chosen_map}-v1", is_slippery=slippery_surface)
+    # Create the environment
+    env = gym.make("FrozenLake-v1",
+                   map_name, desc=desc, is_slippery=is_slippery)
 
     return env
