@@ -3,7 +3,7 @@ import numpy as np
 import gym
 
 
-def train(env, nb_episodes, alpha=0.000045, gamma=0.98):
+def train(env, nb_episodes, alpha=0.000045, gamma=0.98, show_result=False):
     """
     Implement a full trainign.
     
@@ -20,6 +20,7 @@ def train(env, nb_episodes, alpha=0.000045, gamma=0.98):
         state = env.reset()
         state = np.array([state])
         episode_rewards = 0
+
         while True:
             action, grad = policy_gradient(state, weight)
             state, reward, done, _ = env.step(action)
@@ -31,6 +32,11 @@ def train(env, nb_episodes, alpha=0.000045, gamma=0.98):
                 break
 
         scores.append(episode_rewards)
+
+        if show_result and episode % 1000 == 0:
+            print(f"Episode: {episode+1}, Score: {episode_rewards}")
+            env.render()
+
         print(f"Episode: {episode+1}, Score: {episode_rewards}", end="\r", flush=True)
 
     return scores
