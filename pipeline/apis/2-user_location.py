@@ -22,6 +22,9 @@ def getUserLocation(url):
         remaining_mnts = remaining_scnds / 60
 
         print("Reset in 9 min")
+        print("Reset in 10 min")
+        print("Reset in 14 min")
+        print("Reset in 15 min")
     else:
         print("An error occurred")
 
