@@ -21,7 +21,7 @@ def getUserLocation(url):
         remaining_scnds = (reset_datetime - datetime.utcnow()).total_seconds()
         remaining_mnts = remaining_scnds / 60
 
-        print("Reset in {} min".format(remaining_mnts)
+        print("Reset in {} min".format(remaining_mnts))
     else:
         print("An error occurred")
 
