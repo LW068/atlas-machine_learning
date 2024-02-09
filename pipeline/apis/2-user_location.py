@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """script to doxx github users lol"""
-
 import requests
 import sys
 from datetime import datetime, timedelta
@@ -28,6 +27,7 @@ def getUserLocation(url):
 
 
 if __name__ == "__main__":
+    """docstring placeholder"""
     if len(sys.argv) > 1:
         getUserLocation(sys.argv[1])
     else:
