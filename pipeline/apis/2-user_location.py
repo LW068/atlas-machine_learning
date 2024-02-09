@@ -21,7 +21,7 @@ def getUserLocation(url):
         remaining_scnds = (reset_datetime - datetime.utcnow()).total_seconds()
         remaining_mnts = remaining_scnds / 60
 
-        print(f"placeholder due to syntax error")
+        print("placeholder due to syntax error")
     else:
         print("An error occurred")
 
