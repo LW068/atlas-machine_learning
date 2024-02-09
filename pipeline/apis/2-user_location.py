@@ -19,7 +19,7 @@ def getUserLocation(url):
         reset_time = response.headers.get('X-Ratelimit-Reset')
         reset_datetime = datetime.utcfromtimestamp(int(reset_time))
         remaining_scnds = (reset_datetime - datetime.utcnow()).total_seconds()
-        remaining_mnts = remaining_scnds // 60
+        remaining_mnts = int(remaining_scnds) // 60
 
         print("Reset in {} min".format(remaining_mnts))
     else:
