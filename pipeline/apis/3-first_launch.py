@@ -34,7 +34,7 @@ def get_first_launch():
     date_local = launch_data['date_local']
 
     rocket_id = launch_data['rocket']
-    launchpad_id = launch_data['launchpad']
+    lnchpd_id = launch_data['launchpad']
 
     # fetching rocket info
     rocket_response = requests.get(f'{rockets_url}{rocket_id}')
@@ -44,20 +44,19 @@ def get_first_launch():
     else:
         rocket_name = "Unknown Rocket"
 
-    launchpad_response = requests.get(f'{launchpads_url}{launchpad_id}')
+    launchpad_response = requests.get(f'{launchpads_url}{lnchpd_id}')
     if launchpad_response.status_code == 200:
-        launchpad_data = launchpad_response.json()
-        launchpad_name = launchpad_data['name']
-        launchpad_locality = launchpad_data['locality']
+        lnchpd_data = launchpad_response.json()
+        lnchpd_name = lnchpd_data['name']
+        lnchpd_locality = lnchpd_data['locality']
     else:
-        launchpad_name = "Unknown Launchpad"
-        launchpad_locality = "Unknown Locality"
+        lnchpd_name = "Unknown Launchpad"
+        lnchpd_locality = "Unknown Locality"
 
-    launch_details = (
-        f"{launch_name} ({date_local}) {rocket_name} - "
-        f"{launchpad_name} ({launchpad_locality})"
+    l_details = "{} ({}) {} - {} ({})".format(
+        lnchpd_name, date_local, rocket_name, lnchpd_name, lnchpd_locality
     )
-    print(launch_details)
+    print(l_details)
 
 
 if __name__ == '__main__':
