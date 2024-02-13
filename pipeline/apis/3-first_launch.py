@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """space x launch script"""
-
 import requests
 
 
@@ -56,4 +55,5 @@ def get_first_launch():
 
 
 if __name__ == '__main__':
+    """documentation placeholder for this"""
     get_first_launch()
