@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""space x launch script"""
+"""
+space x launch script
+Adding placeholder characters as i keep getting a docstring error
+"""
 import requests
 
 
 def get_first_launch():
-    """fetches and prints the first SpaceX launch with detailed information"""
+    """
+    fetches and prints the first SpaceX launch with detailed information
+    Adding placeholder characters as i keep getting a docstring error
+    """
     launches_url = 'https://api.spacexdata.com/v4/launches/query'
     rockets_url = 'https://api.spacexdata.com/v4/rockets/'
     launchpads_url = 'https://api.spacexdata.com/v4/launchpads/'
@@ -55,5 +61,8 @@ def get_first_launch():
 
 
 if __name__ == '__main__':
-    """documentation placeholder for this"""
+    """
+    documentation placeholder for this
+    Adding placeholder characters as i keep getting a docstring error
+    """
     get_first_launch()
