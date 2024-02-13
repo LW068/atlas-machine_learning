@@ -37,14 +37,14 @@ def get_first_launch():
     lnchpd_id = launch_data['launchpad']
 
     # fetching rocket info
-    rocket_response = requests.get(f'{rockets_url}{rocket_id}')
+    rocket_response = requests.get('{}{}'.format(rockets_url, rocket_id))
     if rocket_response.status_code == 200:
         rocket_info = rocket_response.json()
         rocket_name = rocket_info['name']
     else:
         rocket_name = "Unknown Rocket"
 
-    launchpad_response = requests.get(f'{launchpads_url}{lnchpd_id}')
+    launchpad_response = requests.get('{}{}'.format(launchpads_url, lnchpd_id))
     if launchpad_response.status_code == 200:
         lnchpd_data = launchpad_response.json()
         lnchpd_name = lnchpd_data['name']
