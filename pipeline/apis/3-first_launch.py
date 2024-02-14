@@ -37,8 +37,10 @@ def get_first_launch():
 
     # Formatting the output to match the task's expected output
     print("{} ({}) {} - {} ({})".format(
-        launch_name, date_local, rocket_name, launchpad_name, launchpad_locality
+        launch_name, date_local, rocket_name,
+        launchpad_name, launchpad_locality
     ))
+
 
 if __name__ == '__main__':
     """
