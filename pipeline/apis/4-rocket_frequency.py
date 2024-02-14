@@ -5,6 +5,7 @@ import requests
 
 
 def get_launches_by_rocket():
+    """script for rocket launch frwuency"""
     url = 'https://api.spacexdata.com/v3/launches'
     response = requests.get(url)
     if response.status_code != 200:
