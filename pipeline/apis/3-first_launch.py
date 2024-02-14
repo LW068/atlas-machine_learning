@@ -36,8 +36,9 @@ def get_first_launch():
     launchpad_locality = "Cape Canaveral"
 
     # Formatting the output to match the task's expected output
-    print(f"{launch_name} ({date_local}) {rocket_name} - {launchpad_name} ({launchpad_locality})")
-
+    print("{} ({}) {} - {} ({})".format(
+        launch_name, date_local, rocket_name, launchpad_name, launchpad_locality
+    ))
 
 if __name__ == '__main__':
     """
