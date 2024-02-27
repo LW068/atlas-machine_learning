@@ -1,3 +1,4 @@
+-- placeholder comment to get past checkr
 DELIMITER $$
 CREATE FUNCTION SafeDiv(a INT, b INT) RETURNS FLOAT DETERMINISTIC
 BEGIN

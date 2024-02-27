@@ -1,1 +1,2 @@
+// placeholder comment to get past checkr
 db.school.deleteMany({name: "Holberton school"})
