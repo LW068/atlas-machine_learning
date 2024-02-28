@@ -1,2 +1,2 @@
 // placeholder comment to get past checkr
-db.school.countDocuments()
+db.school.count()
