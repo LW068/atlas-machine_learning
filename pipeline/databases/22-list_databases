@@ -1,2 +1,2 @@
 // placeholder comment to get past checkr
-db.adminCommand('listDatabases')
+show dbs
